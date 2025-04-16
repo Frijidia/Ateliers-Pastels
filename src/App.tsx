@@ -22,7 +22,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           {/* <Route path="/" element={<Index />} /> */}
-          <Route path="/" element={<Contact />} />
+          <Route path="/" element={<Legal />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/portfolio" element={<Portfolio />} />
