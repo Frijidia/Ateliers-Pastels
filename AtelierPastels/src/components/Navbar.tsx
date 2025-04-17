@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/logo.png';
-import LoadingPage from '../page/LoadingPage';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,8 +14,21 @@ const Navbar = () => {
     return location.pathname === path;
   };
 
+  const getNavbarBg = (path: string) => {
+    switch (path) {
+      case '/accueil':
+        return 'bg-cyan-400';
+      case '/a-propos':
+        return 'bg-blue-100';
+      case '/services':
+        return 'bg-red-100';
+      default:
+        return 'bg-white';
+    }
+  };
+
   return (
-    <nav className="w-full  z-50 py-4">
+    <nav className={`w-full z-50 py-4 shadow-md ${getNavbarBg(location.pathname)}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <div className="flex-shrink-0">
@@ -77,7 +89,7 @@ const Navbar = () => {
 
       {isMenuOpen && (
         <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white shadow-lg">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white  shadow-lg">
             <Link 
               to="/accueil" 
               className={`block px-3 py-2 rounded-md text-base font-medium ${isActive('/accueil') ? 'text-black font-bold' : 'text-gray-600 hover:text-black'}`}
