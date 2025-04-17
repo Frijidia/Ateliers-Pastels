@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -12,8 +13,12 @@ export default function Footer() {
         <div>
           <h4 className="font-bold mb-2">Liens Rapides</h4>
           <ul className="space-y-1">
-            <li>À Propos</li>
-            <li>Nos Services</li>
+            <li>
+              <Link className='hover-blue' to='/a-propos'> À Propos </Link>
+            </li>
+            <li>
+              <Link className='hover-blue' to='/sevices'> Nos Services </Link>
+            </li>
             <li>Portfolio</li>
             <li>Contactez-nous</li>
             <li>Mentions Légales</li>
@@ -34,9 +39,9 @@ export default function Footer() {
         <div>
           <h4 className="font-bold mb-2">Contactez-nous</h4>
           <ul className="space-y-1">
-            <li>📞 +33 1 23 45 67 89</li>
-            <li>📧 contact@atelierspastels.com</li>
-            <li>📍 123 Rue de la Création, 75001 Paris, France</li>
+            <li>📞 +229 01 95 52 36 54</li>
+            <li>📧 lesatelierspastels1@gmail.com</li>
+            <li>📍 Quartier Ménontin, Cotonou, Bénin</li>
           </ul>
         </div>
       </div>
