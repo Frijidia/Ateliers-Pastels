@@ -4,6 +4,9 @@ import LoadingPage from './page/LoadingPage';
 import HomePage from './page/HomePage';
 import AboutPage from './page/AboutPage';
 import Services from './page/Services';
+import Portfolio from './page/Portfolio';
+import Contact from './page/Contact';
+
 import './index.css'
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -20,7 +23,9 @@ const AppContent: React.FC = () => {
       <Routes>
         <Route path="/" element={<LoadingPage />} />
         <Route path="/accueil" element={<HomePage />} />
+        <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/a-propos" element={<AboutPage />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/services" element={<Services />} />
         <Route path="/mentions" element={<Mentions />} />
         <Route path="*" element={<Navigate to="/accueil" />} />
