@@ -1,5 +1,5 @@
 
-// import React from 'react';
+import React from 'react';
 import Layout from '../components/Layout';
 // import Hero from '@/components/Hero';
 import SectionTitle from '../components/SectionTitle';
@@ -10,7 +10,7 @@ import { Phone, Mail, MapPin, Clock, Instagram, Facebook } from 'lucide-react';
 
 const Contact = () => {
   return (
-    <Layout>
+    <div>
       {/* <Hero
         title="Contactez-nous"
         subtitle="Entrez en contact avec notre équipe pour discuter de votre prochain projet"
@@ -182,7 +182,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
-    </Layout>
+    </div>
   );
 };
 
