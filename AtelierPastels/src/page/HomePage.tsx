@@ -1,119 +1,247 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
+import art from '../assets/art.png';
+import vases from '../assets/assortiment-vases-modernes.png';
+import carnaval from '../assets/celebration-du-carnaval-art-numerique.png';
+import vedette from '../assets/vedette.png';
+import fond from '../assets/fond.jpg';
 
-const HomePage: React.FC = () => {
+const HomePage = () => {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
-      
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative flex justify-between items-center p-8 md:p-12 lg:p-24 overflow-hidden"
-        style={{ backgroundImage: 'url("../asset/fond.jpg")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-        <div className="w-full md:w-1/2 text-white z-10">
-          <h1 className="text-4xl font-bold mb-4">Bienvenue aux Ateliers Pastels</h1>
-          <p className="text-lg mb-8 max-w-lg">
-            Nous sommes spécialisés dans la création de designs colorés et innovants pour donner vie à vos projets.
+      {/* <div>
+  <img 
+    src={carnaval} 
+    alt="Image principale" 
+    className="w-full h-[400px] object-cover"
+  />
+</div> */}
+
+      <section className="relative h-[600px] bg-gradient-to-b from-blue-200 to-blue-400 overflow-hidden">
+        <div className="absolute top-0 right-0 p-4">
+          <div className="text-pink-500 animate-spin-slow">
+          </div>
+        </div>
+        <div className="absolute inset-0">
+          <img 
+            src={carnaval} 
+            alt="Image principale" 
+            className="w-full h-full object-contain"
+          />
+          <div className="absolute inset-0 bg-black/20"></div>
+        </div>
+      </section>
+
+      {/* Bienvenue Section */}
+      <section className="py-20 bg-pink-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl font-bold text-center mb-12 animate-fade-in">
+              Bienvenue aux Ateliers Pastels
+            </h1>
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="relative transform hover:scale-105 transition-all duration-500">
+                <div className="w-full h-64 bg-white rounded-lg shadow-lg overflow-hidden">
+                  <img 
+                    src={art} 
+                    alt="Art décoratif" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              <div className="space-y-4 animate-slide-in">
+                <p className="text-gray-600">
+                  Création d'histoires visuelles depuis 2020
+                </p>
+                <p className="text-gray-600">
+                  Les Ateliers Pastels est une agence créative spécialisée dans le design graphique et la production artistique. Nous mettons notre passion et notre expertise à votre disposition pour créer des communications visuelles exceptionnelles pour tous vos besoins.
+                </p>
+                <Link
+                  to="/a-propos"
+                  className="inline-block px-6 py-3 bg-pink-100 text-pink-600 rounded-full hover:bg-pink-200 transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1"
+                >
+                  Découvrez Notre Histoire
+                </Link>
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Bannière Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-6 text-gray-900">
+              Créativité & Excellence
+            </h2>
+            <p className="text-xl text-gray-600 leading-relaxed">
+              Notre passion pour le design et notre engagement envers la qualité nous permettent de créer des solutions visuelles uniques qui font briller votre marque.
+            </p>
+          </div>
+        </div>
+      </section>
+      
+      {/* Nos Cibles Section */}
+      <section className="py-20 bg-pink-50 text-gray-900">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-4">
+            Nos Cibles
+          </h2>
+          <p className="text-center text-gray-600 mb-12 text-xl">
+            Des solutions adaptées pour chaque type de client
           </p>
-          <Link to="/services" className="bg-pink-500 hover:bg-pink-600 text-white font-medium py-3 px-6 rounded-md transition duration-300">
-            Découvrir nos services
-          </Link>
-        </div>
-        <div className="hidden md:block w-2/5">
-          <img src="../asset/art.png" alt="Illustration créative" className="w-full h-auto" />
-        </div>
-      </section>
-      
-      {/* Services Section */}
-      <section className="py-16 px-8 bg-gray-50 text-center">
-        <h2 className="text-3xl font-bold mb-12">Nos Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <ServiceCard 
-            icon="🎨" 
-            title="Design Graphique" 
-            description="Création d'identités visuelles, logos et supports de communication." 
-          />
-          <ServiceCard 
-            icon="💻" 
-            title="Développement Web" 
-            description="Sites web responsives et applications adaptées à vos besoins." 
-          />
-          <ServiceCard 
-            icon="📱" 
-            title="Design UX/UI" 
-            description="Interfaces utilisateur intuitives et expériences utilisateur optimisées." 
-          />
-          <ServiceCard 
-            icon="📷" 
-            title="Photographie" 
-            description="Séances photo professionnelles pour mettre en valeur vos produits." 
-          />
-          <ServiceCard 
-            icon="🎥" 
-            title="Production Vidéo" 
-            description="Création de contenus vidéo pour promouvoir votre marque." 
-          />
-          <ServiceCard 
-            icon="📊" 
-            title="Stratégie Digitale" 
-            description="Conseils et accompagnement pour votre présence en ligne." 
-          />
-        </div>
-        <Link to="/services" className="inline-block mt-8 bg-pink-500 hover:bg-pink-600 text-white font-medium py-2 px-6 rounded-md transition duration-300">
-          Tous nos services
-        </Link>
-      </section>
-      
-      {/* Portfolio Section */}
-      <section className="py-16 px-8 text-center">
-        <h2 className="text-3xl font-bold mb-12">Projets et Atelier</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="overflow-hidden rounded-lg shadow-md">
-            <img src="/api/placeholder/400/300" alt="Projet 1" className="w-full h-auto" />
-          </div>
-          <div className="overflow-hidden rounded-lg shadow-md">
-            <img src="/api/placeholder/400/300" alt="Projet 2" className="w-full h-auto" />
-          </div>
-          <div className="overflow-hidden rounded-lg shadow-md">
-            <img src="/api/placeholder/400/300" alt="Projet 3" className="w-full h-auto" />
-          </div>
-        </div>
-        <Link to="/projets" className="inline-block mt-8 bg-pink-500 hover:bg-pink-600 text-white font-medium py-2 px-6 rounded-md transition duration-300">
-          Voir plus
-        </Link>
-      </section>
-      
-      {/* CTA Section */}
-      <section className="py-16 px-8 bg-pink-100 text-center">
-        <h2 className="text-3xl font-bold mb-6">Prêt à discuter votre projet?</h2>
-        <p className="max-w-2xl mx-auto mb-8">
-          Contactez-nous dès aujourd'hui pour transformer vos idées en réalité. Notre équipe est à votre écoute 
-          pour vous accompagner dans la réalisation de vos projets créatifs.
-        </p>
-        <Link to="/contact" className="inline-block bg-pink-500 hover:bg-pink-600 text-white font-medium py-3 px-8 rounded-md transition duration-300">
-          Nous contacter
-        </Link>
-      </section>
-      
-      <Footer />
-    </div>
-  );
-};
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="bg-white p-8 rounded-lg shadow-lg hover:transform hover:scale-105 transition-all duration-300">
+              <div className="text-4xl mb-6 flex justify-center">🏢</div>
+              <h3 className="text-2xl font-bold mb-4 text-center">Entreprises</h3>
+              <div className="text-gray-600 space-y-3">
+                <p className="text-center mb-4">Solutions professionnelles pour votre communication</p>
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <span className="mr-2">•</span>
+                    <span>PME et startups</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-2">•</span>
+                    <span>Grandes entreprises</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-2">•</span>
+                    <span>Institutions</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-2">•</span>
+                    <span>Organisations</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
 
-// Composant ServiceCard
-interface ServiceCardProps {
-  icon: string;
-  title: string;
-  description: string;
-}
+            <div className="bg-white p-8 rounded-lg shadow-lg hover:transform hover:scale-105 transition-all duration-300">
+              <div className="text-4xl mb-6 flex justify-center">🎨</div>
+              <h3 className="text-2xl font-bold mb-4 text-center">Créatifs</h3>
+              <div className="text-gray-600 space-y-3">
+                <p className="text-center mb-4">Support aux projets créatifs et culturels</p>
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <span className="mr-2">•</span>
+                    <span>Artistes</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-2">•</span>
+                    <span>Créateurs</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-2">•</span>
+                    <span>Associations</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-2">•</span>
+                    <span>Galeries d'art</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description }) => {
-  return (
-    <div className="bg-white p-6 rounded-lg shadow-md text-left">
-      <div className="text-2xl mb-4">{icon}</div>
-      <h3 className="text-xl font-semibold mb-4 text-pink-500">{title}</h3>
-      <p className="text-gray-700 mb-4">{description}</p>
+            <div className="bg-white p-8 rounded-lg shadow-lg hover:transform hover:scale-105 transition-all duration-300">
+              <div className="text-4xl mb-6 flex justify-center">👥</div>
+              <h3 className="text-2xl font-bold mb-4 text-center">Particuliers</h3>
+              <div className="text-gray-600 space-y-3">
+                <p className="text-center mb-4">Impressions personnalisées pour vos projets</p>
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <span className="mr-2">•</span>
+                    <span>Événements personnels</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-2">•</span>
+                    <span>Projets créatifs</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-2">•</span>
+                    <span>Cadeaux personnalisés</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-2">•</span>
+                    <span>Décorations</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Projets en Vedette Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-4 animate-fade-in">
+            Projets en Vedette
+          </h2>
+          <p className="text-center text-gray-600 mb-8">
+            Une sélection de nos travaux récents dans différents secteurs
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div className="overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-all duration-500 hover:shadow-xl">
+              <img 
+                src={vedette} 
+                alt="Projet Vedette" 
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <div className="overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-all duration-500 hover:shadow-xl">
+              <img 
+                src={vedette} 
+                alt="Projet Vedette" 
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <div className="overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-all duration-500 hover:shadow-xl">
+              <img 
+                src={vedette} 
+                alt="Projet Vedette" 
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+          <div className="text-center mt-8">
+            <Link
+              to="/portfolio"
+              className="inline-block px-6 py-3 bg-pink-100 text-pink-600 rounded-full hover:bg-pink-200 transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1"
+            >
+              Voir Tout le Portfolio
+            </Link>
+          </div>
+        </div>
+      </section>
+      
+      {/* Call to Action Section */}
+      <section className="py-20 bg-pink-50">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-4 animate-fade-in">
+            Prêt à Démarrer Votre Projet ?
+          </h2>
+          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+            Donnons vie à votre vision avec nos solutions créatives de design et d'impression de haute qualité.
+          </p>
+          <div className="flex justify-center space-x-4">
+            <Link
+              to="/contact"
+              className="px-6 py-3 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1"
+            >
+              Contactez-nous
+            </Link>
+            <Link
+              to="/contact"
+              className="px-6 py-3 bg-white text-gray-900 rounded-full hover:bg-gray-100 transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1"
+            >
+              Demander un Devis
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
