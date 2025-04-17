@@ -15,22 +15,7 @@ interface ProjectCardProps {
 const HomePage = () => {
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Header/Navbar - noir avec logo */}
-      <header className="bg-black text-white p-4">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="text-xl font-bold flex items-center gap-2">
-            <Globe className="w-6 h-6" />
-            ATELIERS PASTELS
-          </div>
-          <nav>
-            <ul className="flex space-x-4">
-              <li><a href="#" className="hover:text-gray-300 flex items-center gap-2"><Menu className="w-5 h-5" /> Menu</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
       
-      {/* Hero Section avec image de fond */}
       <section className="bg-cyan-400 py-16 px-4 relative">
         <img 
           src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=2400&q=80" 
@@ -39,7 +24,6 @@ const HomePage = () => {
         />
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="flex flex-col md:flex-row items-center justify-between">
-            {/* Formes 3D */}
             <div className="w-full md:w-1/2 mb-8 md:mb-0">
               <div className="relative h-64 w-full">
                 <div className="absolute left-4 top-4 w-40 h-40 rounded-full bg-blue-500 opacity-80"></div>
@@ -54,7 +38,6 @@ const HomePage = () => {
               </div>
             </div>
             
-            {/* Texte de bienvenue */}
             <div className="w-full md:w-1/2 text-center md:text-left">
               <h1 className="text-4xl font-bold mb-4">Bienvenue aux Ateliers Pastels</h1>
               <p className="text-lg mb-6">Nous sommes spécialisés dans la création de designs colorés et innovants pour donner vie à vos projets.</p>
@@ -63,7 +46,6 @@ const HomePage = () => {
         </div>
       </section>
       
-      {/* Services Section - fond blanc */}
       <section className="py-16 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold mb-12 text-center">Nos Services</h2>
@@ -131,7 +113,6 @@ const HomePage = () => {
         </div>
       </section>
       
-      {/* CTA Section */}
       <section className="py-16 px-4 bg-white">
         <div className="max-w-4xl mx-auto bg-pink-50 p-12 rounded-2xl shadow-lg">
           <h2 className="text-3xl font-bold mb-6 text-center">Prêt à discuter votre projet?</h2>
@@ -146,7 +127,6 @@ const HomePage = () => {
         </div>
       </section>
       
-      {/* Footer */}
       <footer className="py-12 px-4 bg-gray-100 mt-auto">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>

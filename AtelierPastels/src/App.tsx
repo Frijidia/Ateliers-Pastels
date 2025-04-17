@@ -5,18 +5,21 @@ import HomePage from './page/HomePage';
 import AboutPage from './page/AboutPage';
 import Services from './page/Services';
 import './index.css'
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 const App: React.FC = () => {
   return (
     <Router>
+      <Navbar />
       <Routes>
         <Route path="/" element={<LoadingPage />} />
         <Route path="/accueil" element={<HomePage />} />
         <Route path="/a-propos" element={<AboutPage />} />
-        {/* Rediriger les autres chemins vers la page d'accueil */}
         <Route path="/services" element={<Services />} />
         <Route path="*" element={<Navigate to="/accueil" />} />
       </Routes>
+      <Footer/>
     </Router>
   );
 };
