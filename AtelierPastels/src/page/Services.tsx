@@ -9,9 +9,9 @@ import { Palette, Printer, Gift, Megaphone, Monitor, Briefcase } from "lucide-re
 const Services = () => {
   return (
     <div className="font-sans text-gray-800 bg-gradient-services min-h-screen">
-      <section className="py-20 from-orange-100 to-yellow-200 text-center">
+      <section className="py-10 from-orange-100 to-yellow-200 text-center">
         <h2 className="text-4xl font-bold mb-4">Nos Services</h2>
-        <p className="text-gray-700 mb-10">Des solutions complètes pour tous vos besoins en communication visuelle</p>
+        <p className="text-gray-700 mb-20">Des solutions complètes pour tous vos besoins en communication visuelle</p>
 
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 px-4 items-center">
           <div className="space-y-6 text-left">

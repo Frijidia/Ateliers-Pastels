@@ -22,6 +22,12 @@ const Navbar = () => {
         return 'bg-blue-100';
       case '/services':
         return 'bg-red-100';
+      case '/portfolio':
+        return 'bg-green-100';
+      case '/contact':
+        return 'bg-yellow-100';
+      case '/mentions':
+        return 'bg-blue-400';
       default:
         return 'bg-white';
     }

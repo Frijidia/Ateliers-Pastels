@@ -21,7 +21,9 @@ export default function Footer() {
             </li>
             <li>Portfolio</li>
             <li>Contactez-nous</li>
-            <li>Mentions Légales</li>
+            <li>
+            <Link className='hover-blue' to='/mentions'>Mentions Légales</Link>
+            </li>
           </ul>
         </div>
 
