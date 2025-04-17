@@ -1,9 +1,9 @@
 
 import { useState } from 'react';
 import portfolioImage from '../assets/port_img.png';
-
+import React from 'react';
 // import { Link } from 'react-router-dom';
-import Layout from '../components/Layout';
+// import Layout from '../components/Layout';
 // import Hero from '@/component/Hero';
 import SectionTitle from '../components/SectionTitle';
 import { projects, allCategories } from '../components/portfolio/ProjectData';
@@ -31,7 +31,8 @@ const Portfolio = () => {
     };
 
     return (
-        <Layout>
+        // <Layout>
+        <div>
             <div className="mt-14">
 
                 <SectionTitle
@@ -82,7 +83,8 @@ const Portfolio = () => {
 
             {/* CTA Section */}
             <CallToActionSection />
-        </Layout>
+        {/* </Layout> */}
+        </div>
     );
 };
 
