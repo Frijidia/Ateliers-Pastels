@@ -1,39 +1,78 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+// Importer directement l'image
+import logo from '../assets/logo.png';
 
-const LoadingPage: React.FC = () => {
+const LoadingPage = () => {
+  const [progress, setProgress] = useState(0);
   const navigate = useNavigate();
-
+  
   useEffect(() => {
-    // Redirection vers la page d'accueil après 3 secondes
-    const timer = setTimeout(() => {
+    // Simulate progressive loading
+    const timer = setInterval(() => {
+      setProgress(prevProgress => {
+        const newProgress = prevProgress + 1;
+        return newProgress >= 100 ? 100 : newProgress;
+      });
+    }, 30);
+    
+    // Redirect to home page once loading is complete
+    const redirectTimer = setTimeout(() => {
       navigate('/accueil');
-    }, 3000);
-
-    return () => clearTimeout(timer);
+    }, 3500);
+    
+    return () => {
+      clearInterval(timer);
+      clearTimeout(redirectTimer);
+    };
   }, [navigate]);
-
+  
+  // Styles explicites pour garantir l'affichage
+  const containerStyle = {
+    minHeight: '100vh',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: "#ffd6e0",
+    position: 'relative',
+    overflow: 'hidden'
+  };
+  
+  const loaderContainerStyle = {
+    width: '320px',
+    height: '12px',
+    backgroundColor: '#e2e8f0',
+    borderRadius: '9999px',
+    overflow: 'hidden',
+    marginTop: '24px'
+  };
+  
+  const progressBarStyle = {
+    height: '100%',
+    width: `${progress}%`,
+    backgroundColor: '#3b82f6',
+    transition: 'width 100ms ease-out'
+  };
+  
   return (
-    <div className="h-screen flex flex-col justify-center items-center bg-pink-100">
-      <div className="mb-10 w-64">
-        <img src="/logo.png" alt="Les Ateliers Pastels Logo" className="w-full h-auto" />
+    <div style={containerStyle}>
+      {/* Logo and content container */}
+      <div style={{ zIndex: 10, textAlign: 'center' }}>
+        {/* Logo image */}
+        <div style={{ marginBottom: '32px' }}>
+          <img
+            src={logo}
+            alt="Les Ateliers Pastels"
+            style={{ width: '288px', height: 'auto', display: 'block', margin: '0 auto' }}
+          />
+        </div>
+        
+        {/* Loading bar */}
+        <div style={loaderContainerStyle}>
+          <div style={progressBarStyle}></div>
+        </div>
       </div>
-      <div className="w-full max-w-md bg-gray-200 rounded-full overflow-hidden">
-        <div 
-          className="h-4 bg-gradient-to-r from-blue-400 to-gray-200 rounded-full"
-          style={{
-            animation: 'loading 3s forwards',
-            width: '0%',
-          }}
-        />
-      </div>
-      
-      <style jsx>{`
-        @keyframes loading {
-          0% { width: 0; }
-          100% { width: 100%; }
-        }
-      `}</style>
     </div>
   );
 };
