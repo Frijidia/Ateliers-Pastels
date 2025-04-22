@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import '../styles/animations.css';
 import '../styles/hover.css';
 
@@ -44,14 +44,11 @@ const cloudStyles = `
 const AboutPage = () => {
   return (
     <div className="min-h-screen">
-      {/* Ajout des styles */}
       <style>{cloudStyles}</style>
 
-      {/* Hero Section avec nuages interactifs */}
       <section className="relative min-h-[80vh] flex items-center justify-center animate-fade-in-up" style={{
         background: 'linear-gradient(to right, rgba(237, 56, 143, 0.61) 41%, rgba(255, 255, 132, 1) 69%, rgba(152, 166, 255, 1) 100%)'
       }}>
-        {/* Nuages avec hover */}
         <div className="cloud cloud1 hover-scale" style={{ top: '10%', left: '5%' }}>
           <svg width="100" height="60" viewBox="0 0 100 60" fill="white" opacity="0.8">
             <path d="M90,40 C90,50 80,60 50,60 C20,60 10,50 10,40 C10,30 20,20 30,20 C30,10 40,0 50,0 C60,0 70,10 70,20 C80,20 90,30 90,40 Z" />
@@ -76,7 +73,6 @@ const AboutPage = () => {
           </svg>
         </div>
 
-        {/* Contenu Hero existant */}
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-6xl font-extrabold mb-8 text-gray-900">
@@ -92,7 +88,6 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Histoire Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-extrabold mb-12 text-center animate-fade-in-up">
@@ -114,11 +109,9 @@ const AboutPage = () => {
               </p>
             </div>
 
-            {/* Timeline avec animations */}
             <div className="relative">
               <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-pink-200"></div>
               <div className="space-y-24 relative">
-                {/* Chaque point de timeline avec animation */}
                 <div className="flex items-center justify-end md:justify-between animate-fade-in-left delay-100">
                   <div className="w-5/12 hidden md:block"></div>
                   <div className="w-2.5 h-2.5 bg-pink-300 rounded-full absolute left-1/2 transform -translate-x-1/2"></div>
@@ -157,7 +150,6 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Équipe Section */}
       <section className="py-20 bg-pink-50">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-extrabold mb-12 text-center">Notre Équipe</h2>
@@ -173,12 +165,10 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Nos Services Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-extrabold mb-12 text-center">Nos Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Service 1 */}
             <div className="text-center p-8 bg-pink-50 rounded-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-2">
               <div className="w-20 h-20 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-6 transform transition-all duration-300 hover:rotate-12">
                 <span className="text-4xl">🎨</span>
@@ -204,7 +194,6 @@ const AboutPage = () => {
               </ul>
             </div>
 
-            {/* Service 2 */}
             <div className="text-center p-8 bg-blue-50 rounded-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-2">
               <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6 transform transition-all duration-300 hover:rotate-12">
                 <span className="text-4xl">🖨️</span>
@@ -230,7 +219,6 @@ const AboutPage = () => {
               </ul>
             </div>
 
-            {/* Service 3 */}
             <div className="text-center p-8 bg-green-50 rounded-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-2">
               <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 transform transition-all duration-300 hover:rotate-12">
                 <span className="text-4xl">🎁</span>
@@ -259,7 +247,6 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Section Témoignages */}
       <section className="py-20 bg-pink-50">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-extrabold text-center mb-4">
@@ -270,51 +257,48 @@ const AboutPage = () => {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {/* Témoignage 1 */}
             <div className="bg-white rounded-xl p-8 shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-2">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-pink-200 rounded-full flex items-center justify-center text-xl font-semibold text-pink-600 mr-4 transform transition-all duration-300 hover:rotate-12 hover:scale-110">
-                  L
+                  H
                 </div>
                 <div>
-                  <h3 className="font-bold text-xl hover:text-pink-600 transition-colors duration-300">Laura Moreau</h3>
-                  <p className="text-gray-600">Directrice Marketing, Hôtels Bellevue</p>
+                  <h3 className="font-bold text-xl hover:text-pink-600 transition-colors duration-300">Hugues AMOUSSOU</h3>
+                  <p className="text-gray-600">Gérant de KAWERU GROUP</p>
                 </div>
               </div>
               <blockquote className="text-gray-600 italic leading-relaxed hover:text-gray-800 transition-colors duration-300">
-                "Les Ateliers Pastels ont transformé notre identité de marque avec un système de design sophistiqué et cohérent. Leur attention aux détails et leur compréhension de nos objectifs étaient impressionnantes."
+                "Travailler avec LES ATELIERS PASTELS a été une expérience marquante. Leur sens du détail, leur capacité d’écoute et leur créativité ont grandement contribué à valoriser l’image de notre groupe. Une équipe professionnelle et passionnée que je recommande sans hésiter."
               </blockquote>
             </div>
 
-            {/* Témoignage 2 */}
             <div className="bg-white rounded-xl p-8 shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-2">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-blue-200 rounded-full flex items-center justify-center text-xl font-semibold text-blue-600 mr-4 transform transition-all duration-300 hover:rotate-12 hover:scale-110">
-                  M
+                  O
                 </div>
                 <div>
-                  <h3 className="font-bold text-xl hover:text-blue-600 transition-colors duration-300">Marc Dupont</h3>
-                  <p className="text-gray-600">Fondateur, Jardin Bio</p>
+                  <h3 className="font-bold text-xl hover:text-blue-600 transition-colors duration-300">Odilon CHODATON</h3>
+                  <p className="text-gray-600">Gérant d’AFRICA BARBECUE</p>
                 </div>
               </div>
               <blockquote className="text-gray-600 italic leading-relaxed hover:text-gray-800 transition-colors duration-300">
-                "Travailler avec cette équipe a été un plaisir du début à la fin. Ils ont pris notre projet d'emballage écologique et ont dépassé nos attentes avec des solutions créatives et durables."
+                "Nous avions besoin d’un accompagnement authentique pour refléter l’esprit convivial de notre marque, et LES ATELIERS PASTELS ont su capter l’essence même de notre univers. Leur approche humaine et sur mesure fait toute la différence."
               </blockquote>
             </div>
 
-            {/* Témoignage 3 */}
             <div className="bg-white rounded-xl p-8 shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-2">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-yellow-200 rounded-full flex items-center justify-center text-xl font-semibold text-yellow-600 mr-4 transform transition-all duration-300 hover:rotate-12 hover:scale-110">
-                  S
+                  T
                 </div>
                 <div>
-                  <h3 className="font-bold text-xl hover:text-yellow-600 transition-colors duration-300">Sarah Legrand</h3>
-                  <p className="text-gray-600">Responsable Événements, Musée de la Ville</p>
+                  <h3 className="font-bold text-xl hover:text-yellow-600 transition-colors duration-300">Terence QUENUM</h3>
+                  <p className="text-gray-600">Promoteur de HOQ</p>
                 </div>
               </div>
               <blockquote className="text-gray-600 italic leading-relaxed hover:text-gray-800 transition-colors duration-300">
-                "La signalétique et les supports promotionnels créés pour notre exposition étaient magnifiques. L'équipe a été réactive, professionnelle, et a tout livré dans des délais serrés."
+                "À chaque étape de notre projet, LES ATELIERS PASTELS ont fait preuve d’un professionnalisme irréprochable. Leur vision artistique, alliée à une rigueur stratégique, a donné vie à une identité forte et cohérente pour HOQ."
               </blockquote>
             </div>
           </div>

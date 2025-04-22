@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import portfolioImage from '../assets/port_img.png';
-import React from 'react';
+// import React from 'react';
 // import { Link } from 'react-router-dom';
 // import Layout from '../components/Layout';
 // import Hero from '@/component/Hero';
@@ -32,7 +32,7 @@ const Portfolio = () => {
 
     return (
         // <Layout>
-        <div>
+        <div className='font-sans text-gray-800 min-h-screen'>
             <div className="mt-14">
 
                 <SectionTitle

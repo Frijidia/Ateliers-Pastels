@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import './HomePage.tsx'
@@ -25,7 +25,7 @@ const LoadingPage = () => {
     };
   }, [navigate]);
   
-  const containerStyle = {
+  const containerStyle: React.CSSProperties = {
     minHeight: '100vh',
     display: 'flex',
     flexDirection: 'column',
