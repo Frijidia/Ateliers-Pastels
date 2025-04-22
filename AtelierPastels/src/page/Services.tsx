@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import firstvecteur from "../assets/fond-flottant-formes-3d-realistes.png";
 import secondvecteur from "../assets/assortiment-vases-modernes.png";
 import thirdvecteur from "../assets/celebration-du-carnaval-art-numerique.png";

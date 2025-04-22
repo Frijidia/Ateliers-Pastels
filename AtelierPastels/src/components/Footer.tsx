@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
@@ -43,7 +43,7 @@ export default function Footer() {
           <ul className="space-y-1">
             <li>📞 +229 01 95 52 36 54</li>
             <li>📧 lesatelierspastels1@gmail.com</li>
-            <li>📍 Quartier Ménontin, Cotonou, Bénin</li>
+            <li>📍 Îlot 2111, M/JEAN PAUL BOSSOU, Mènontin Cotonou</li>
           </ul>
         </div>
       </div>

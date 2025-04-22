@@ -1,6 +1,6 @@
 
-import React from 'react';
-import Layout from '../components/Layout';
+// import React from 'react';
+// import Layout from '../components/Layout';
 // import Hero from '@/components/Hero';
 import SectionTitle from '../components/SectionTitle';
 import ContactForm from '../components/ContactForm';
@@ -17,7 +17,6 @@ const Contact = () => {
         image="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
       /> */}
 
-      {/* Contact Information */}
       <section className="section-padding bg-white mt-10 mx-24 my-24">
         <div className="container mx-auto">
           <SectionTitle 
@@ -26,7 +25,6 @@ const Contact = () => {
           />
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 mb-12">
-          {/* Contact Info Card 1 */}
             <div className="bg-gray-50 rounded-lg p-6 text-center hover-scale">
               <div className="bg-pastel-pink w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Phone size={24} className="text-white" />
@@ -36,7 +34,6 @@ const Contact = () => {
               <p className="text-gray-600">+33 9 87 65 43 21</p>
             </div>
             
-            {/* Contact Info Card 2 */}
             <div className="bg-gray-50 rounded-lg p-6 text-center hover-scale">
               <div className="bg-pastel-turquoise w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Mail size={24} className="text-white" />
@@ -46,7 +43,6 @@ const Contact = () => {
               <p className="text-gray-600">info@atelierspastels.com</p>
             </div>
             
-            {/* Contact Info Card 3 */}
             <div className="bg-gray-50 rounded-lg p-6 text-center hover-scale">
               <div className="bg-pastel-yellow w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <MapPin size={24} className="text-white" />
@@ -56,7 +52,6 @@ const Contact = () => {
               <p className="text-gray-600">75001 Paris, France</p>
             </div>
             
-            {/* Contact Info Card 4 */}
             <div className="bg-gray-50 rounded-lg p-6 text-center hover-scale">
               <div className="bg-pastel-pink w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Clock size={24} className="text-white" />
@@ -69,11 +64,9 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Map and Forms Section */}
       <section className="section-padding bg-gray-50 pt-12 pb-12" >
   <div className="container mx-auto">
     <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-            {/* Map */}
             <div>
               <h2 className="text-2xl font-display font-bold mb-6">Nous Trouver</h2>
               <div className="aspect-square lg:aspect-auto lg:h-[500px] rounded-lg overflow-hidden shadow-md">
@@ -110,7 +103,6 @@ const Contact = () => {
               </div>
             </div>
             
-            {/* Forms */}
             <div>
               <Tabs defaultValue="contact" className="w-full">
                 <TabsList className="grid grid-cols-2 mb-6">
@@ -135,7 +127,6 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
       <section className="section-padding bg-pastel-pink pt-10 pb-10">
       <div className="container mx-auto">
           <SectionTitle 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/logo.png';
 
@@ -10,22 +10,22 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const isActive = (path) => {
+  const isActive = (path:string) => {
     return location.pathname === path;
   };
 
   const getNavbarBg = (path: string) => {
     switch (path) {
       case '/accueil':
-        return 'bg-cyan-400';
+        return 'bg-gradient-to-b from-[#a1bddd] to-[#4b87c7]';
       case '/a-propos':
-        return 'bg-blue-100';
+        return '';
       case '/services':
         return 'bg-red-100';
       case '/portfolio':
-        return 'bg-green-100';
+        return 'bg-white';
       case '/contact':
-        return 'bg-yellow-100';
+        return 'bg-white';
       case '/mentions':
         return 'bg-blue-400';
       default:
@@ -34,7 +34,13 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`w-full z-50 py-4 shadow-md `}> {/* ${getNavbarBg(location.pathname)}`>*/}
+    // <nav className={`w-full z-50 py-4 shadow-md* ${getNavbarBg(location.pathname)}`}>
+    <nav 
+      className={`w-full z-50 py-4 shadow-md ${getNavbarBg(location.pathname)}`}
+      style={location.pathname === '/a-propos' ? {
+        background: 'linear-gradient(to right, rgba(237, 56, 143, 0.61) 41%, rgba(255, 255, 132, 1) 69%, rgba(152, 166, 255, 1) 100%)'
+      } : {}}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <div className="flex-shrink-0">

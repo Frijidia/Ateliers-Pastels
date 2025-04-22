@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+// import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import art from '../assets/art.png';
-import vases from '../assets/assortiment-vases-modernes.png';
+// import vases from '../assets/assortiment-vases-modernes.png';
 import carnaval from '../assets/celebration-du-carnaval-art-numerique.png';
 import vedette from '../assets/vedette.png';
-import fond from '../assets/fond.jpg';
+// import fond from '../assets/fond.jpg';
 import '../styles/animations.css';
 import '../styles/hover.css';
 
@@ -35,7 +35,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Bienvenue Section */}
       <section className="py-20 bg-pink-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -71,7 +70,6 @@ const HomePage = () => {
         </div>
       </section>
       
-      {/* Bannière Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -85,7 +83,6 @@ const HomePage = () => {
         </div>
       </section>
       
-      {/* Nos Cibles Section */}
       <section className="py-20 bg-pink-50 text-gray-900">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-4 animate-fade-in-up">
@@ -176,7 +173,6 @@ const HomePage = () => {
         </div>
       </section>
       
-      {/* Projets en Vedette Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-4 animate-fade-in-up">
@@ -219,7 +215,6 @@ const HomePage = () => {
         </div>
       </section>
       
-      {/* Call to Action Section */}
       <section className="py-20 bg-pink-50">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4 animate-fade-in-up">
