@@ -17,8 +17,8 @@ const Navbar = () => {
   const getNavbarBg = (path: string) => {
     switch (path) {
       case '/accueil':
-        return 'bg-gradient-to-b from-[#a1bddd] to-[#4b87c7]';
-        //return 'bg-[#a1bddd]';
+        // return 'bg-gradient-to-b from-[#a1bddd] to-[#4b87c7]';
+        return 'bg-[#81AAE3]';
       case '/a-propos':
         return '';
       case '/services':
@@ -39,7 +39,9 @@ const Navbar = () => {
     <nav 
       className={`w-full z-50 py-4 ${getNavbarBg(location.pathname)}`}
       style={location.pathname === '/a-propos' ? {
-        background: 'linear-gradient(to right, rgba(237, 56, 143, 0.61) 41%, rgba(255, 255, 132, 1) 69%, rgba(152, 166, 255, 1) 100%)'
+        // background: 'linear-gradient(to right, rgba(152, 166, 255, 1) 61%, rgba(255, 255, 132, 1) 69%,  rgba(237, 56, 143, 0.61) 100%)'
+        // background: 'linear-gradient(to right, rgba(152, 166, 255, 1) 41%, rgba(255, 255, 132, 1) 69%, rgba(152, 166, 255, 1) 100%)'
+        background: 'linear-gradient(to right, rgba(152, 166, 255, 1) 41%, rgb(255, 255, 255) 69%, rgba(152, 166, 255, 1) 100%)'
       } : {}}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

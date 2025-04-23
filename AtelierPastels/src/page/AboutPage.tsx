@@ -48,7 +48,9 @@ const AboutPage = () => {
       <style>{cloudStyles}</style>
 
       <section className="relative min-h-[80vh] flex items-center justify-center animate-fade-in-up" style={{
-        background: 'linear-gradient(to right, rgba(237, 56, 143, 0.61) 41%, rgba(255, 255, 132, 1) 69%, rgba(152, 166, 255, 1) 100%)'
+        // background: 'linear-gradient(to right, rgba(152, 166, 255, 1) 61%, rgba(255, 255, 132, 1) 69%,  rgba(237, 56, 143, 0.61) 100%)'
+        // background: 'linear-gradient(to right, rgba(237, 56, 143, 0.61) 41%, rgba(255, 255, 132, 1) 69%, rgba(152, 166, 255, 1) 100%)'
+        background: 'linear-gradient(to right, rgba(152, 166, 255, 1) 41%, rgb(255, 255, 255) 69%, rgba(152, 166, 255, 1) 100%)'
       }}>
         <div className="cloud cloud1 hover-scale" style={{ top: '10%', left: '5%' }}>
           <svg width="100" height="60" viewBox="0 0 100 60" fill="white" opacity="0.8">
