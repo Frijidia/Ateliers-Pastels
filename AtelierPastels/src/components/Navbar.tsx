@@ -18,6 +18,7 @@ const Navbar = () => {
     switch (path) {
       case '/accueil':
         return 'bg-gradient-to-b from-[#a1bddd] to-[#4b87c7]';
+        //return 'bg-[#a1bddd]';
       case '/a-propos':
         return '';
       case '/services':
@@ -36,7 +37,7 @@ const Navbar = () => {
   return (
     // <nav className={`w-full z-50 py-4 shadow-md* ${getNavbarBg(location.pathname)}`}>
     <nav 
-      className={`w-full z-50 py-4 shadow-md ${getNavbarBg(location.pathname)}`}
+      className={`w-full z-50 py-4 ${getNavbarBg(location.pathname)}`}
       style={location.pathname === '/a-propos' ? {
         background: 'linear-gradient(to right, rgba(237, 56, 143, 0.61) 41%, rgba(255, 255, 132, 1) 69%, rgba(152, 166, 255, 1) 100%)'
       } : {}}
