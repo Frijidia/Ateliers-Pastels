@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, ReactNode } from "react";
 import firstvecteur from "../assets/fond-flottant-formes-3d-realistes.png";
 import secondvecteur from "../assets/assortiment-vases-modernes.png";
 import thirdvecteur from "../assets/celebration-du-carnaval-art-numerique.png";
@@ -6,8 +6,15 @@ import fourthvecteur from "../assets/personnage-affaires-dessin-anime-3d_1048-16
 import fifthvecteur from "../assets/art.png";
 import { Palette, Printer, Gift, Megaphone, Monitor, Briefcase } from "lucide-react";
 
+
 const Services = () => {
-  const AnimatedSection = ({ children, delay = 0, className = "" }) => {
+  interface AnimatedSectionProps {
+    children: React.ReactNode;
+    delay?: number;
+    className?: string;
+  }
+
+  const AnimatedSection = ({ children, delay = 0, className = "" }: AnimatedSectionProps) => {
     const [isVisible, setIsVisible] = useState(false);
     const [hasAnimated, setHasAnimated] = useState(false);
 
@@ -40,58 +47,60 @@ const Services = () => {
       <div
         id={`section-${delay}`}
         className={`transition-all duration-1000 ${
-          isVisible 
-            ? "opacity-100 translate-y-0" 
-            : "opacity-0 translate-y-16"
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
         } ${className}`}
       >
         {children}
       </div>
     );
   };
+  
+interface AnimatedListItemProps {
+  children: ReactNode;
+  delay?: number;
+}
 
-  const AnimatedListItem = ({ children, delay = 0 }) => {
-    const [isVisible, setIsVisible] = useState(false);
-    const [hasAnimated, setHasAnimated] = useState(false);
+const AnimatedListItem = ({ children, delay = 0 }: AnimatedListItemProps) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
 
-    useEffect(() => {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting && !hasAnimated) {
-            setTimeout(() => {
-              setIsVisible(true);
-              setHasAnimated(true);
-            }, delay);
-          }
-        },
-        { threshold: 0.1 }
-      );
-
-      const currentElement = document.getElementById(`list-item-${delay}`);
-      if (currentElement) {
-        observer.observe(currentElement);
-      }
-
-      return () => {
-        if (currentElement) {
-          observer.unobserve(currentElement);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          setTimeout(() => {
+            setIsVisible(true);
+            setHasAnimated(true);
+          }, delay);
         }
-      };
-    }, [delay, hasAnimated]);
-
-    return (
-      <div
-        id={`list-item-${delay}`}
-        className={`transition-all duration-700 ${
-          isVisible 
-            ? "opacity-100 translate-x-0" 
-            : "opacity-0 translate-x-10"
-        }`}
-      >
-        {children}
-      </div>
+      },
+      { threshold: 0.1 }
     );
-  };
+
+    const currentElement = document.getElementById(`list-item-${delay}`);
+    if (currentElement) {
+      observer.observe(currentElement);
+    }
+
+    return () => {
+      if (currentElement) {
+        observer.unobserve(currentElement);
+      }
+    };
+  }, [delay, hasAnimated]);
+
+  return (
+    <div
+      id={`list-item-${delay}`}
+      className={`transition-all duration-700 ${
+        isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
+      }`}
+    >
+      {children}
+    </div>
+  );
+};
+
 
   return (
     <div className="font-sans text-gray-800 bg-gradient-services min-h-screen">
