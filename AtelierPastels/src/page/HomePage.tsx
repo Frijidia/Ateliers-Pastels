@@ -4,6 +4,9 @@ import art from '../assets/art.png';
 // import vases from '../assets/assortiment-vases-modernes.png';
 import carnaval from '../assets/celebration-du-carnaval-art-numerique.png';
 import vedette from '../assets/vedette.png';
+import vedette2 from '../assets/Talisman.png';
+import vedette3 from '../assets/HASHTAG.png';
+import vedette4 from '../assets/Logo.png';
 // import fond from '../assets/fond.jpg';
 import '../styles/animations.css';
 import '../styles/hover.css';
@@ -184,21 +187,21 @@ const HomePage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="overflow-hidden rounded-lg hover-rotate hover-lift">
               <img 
-                src={vedette} 
+                src={vedette4} 
                 alt="Projet Vedette" 
                 className="w-full h-auto object-cover hover-scale"
               />
             </div>
             <div className="overflow-hidden rounded-lg hover-rotate hover-lift">
               <img 
-                src={vedette} 
+                src={vedette2} 
                 alt="Projet Vedette" 
                 className="w-full h-auto object-cover hover-scale"
               />
             </div>
             <div className="overflow-hidden rounded-lg hover-rotate hover-lift">
               <img 
-                src={vedette} 
+                src={vedette3} 
                 alt="Projet Vedette" 
                 className="w-full h-auto object-cover hover-scale"
               />
