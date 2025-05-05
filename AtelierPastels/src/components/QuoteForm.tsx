@@ -15,6 +15,7 @@ import { Input } from '../components/ui/input';
 import { Textarea } from '../components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../components/ui/select';
 import { useToast } from '../components/ui/use-toast';
+import emailjs from 'emailjs-com'; // Importer EmailJS
 
 const formSchema = z.object({
   name: z.string().min(2, { message: 'Le nom doit contenir au moins 2 caractères.' }),
@@ -47,11 +48,39 @@ const QuoteForm = () => {
 
   function onSubmit(values: FormValues) {
     console.log(values);
-    toast({
-      title: "Demande de devis envoyée!",
-      description: "Nous préparerons votre devis personnalisé dès que possible.",
+
+    // Envoyer les données à EmailJS
+    emailjs.send(
+      'service_fzyqdhj',       // Remplacer par ton service ID
+      'template_c39cooh',      // Remplacer par ton template ID
+      {
+        name: values.name,
+        email: values.email,
+        phone: values.phone,
+        company: values.company,
+        serviceType: values.serviceType,
+        budget: values.budget,
+        projectDetails: values.projectDetails,
+        deadline: values.deadline,
+      },
+      'lXQoYgh1Nw5i8k2yz'           // Remplacer par ton User ID
+    )
+    .then((response) => {
+      console.log('Success:', response);
+      toast({
+        title: "Demande de devis envoyée!",
+        description: "Nous préparerons votre devis personnalisé dès que possible.",
+      });
+      form.reset();
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      toast({
+        title: "Une erreur est survenue.",
+        description: "Veuillez réessayer plus tard.",
+        variant: 'destructive',
+      });
     });
-    form.reset();
   }
 
   return (

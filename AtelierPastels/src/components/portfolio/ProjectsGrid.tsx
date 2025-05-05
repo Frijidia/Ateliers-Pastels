@@ -4,7 +4,9 @@ import ProjectCard from '../ProjectCard';
 interface Project {
   id: string;
   title: string;
+  description: string;
   category: string;
+  client: string;
   tags: string[];
   image: string;
 }
@@ -23,8 +25,8 @@ const ProjectsGrid = ({ projects, visibleProjects, onLoadMore }: ProjectsGridPro
           <ProjectCard
             key={project.id}
             id={project.id}
-            title={project.title}
-            category={project.category}
+            title={project.description}
+            category={project.client}
             image={project.image}
           />
         ))}

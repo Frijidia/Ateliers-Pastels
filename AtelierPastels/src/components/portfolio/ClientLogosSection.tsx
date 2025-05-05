@@ -15,8 +15,8 @@ const ClientLogosSection = () => {
     <section className="section-padding bg-pastel-yellow mt-8">
       <div className="container mx-auto pt-8 pb-8">
         <SectionTitle 
-          title="Clients We've Worked With" 
-          subtitle="Trusted by businesses across various industries"
+          title="Clients avec lesquels nous avons travaillé" 
+          subtitle="Des entreprises de divers secteurs d'activité nous font confiance"
         />
         
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mt-12">

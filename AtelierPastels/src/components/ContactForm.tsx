@@ -15,6 +15,7 @@ import {
 import { Input } from '../components/ui/input';
 import { Textarea } from '../components/ui/textarea';
 import { useToast } from '../components/ui/use-toast';
+import emailjs from 'emailjs-com'; 
 
 const formSchema = z.object({
   name: z.string().min(2, { message: 'Le nom doit contenir au moins 2 caractères.' }),
@@ -40,12 +41,29 @@ const ContactForm = () => {
   });
 
   function onSubmit(values: FormValues) {
-    console.log(values);
-    toast({
-      title: "Message envoyé!",
-      description: "Nous vous répondrons dès que possible.",
+    // Utilisation de EmailJS pour envoyer le formulaire
+    emailjs.send(
+      'service_fzyqdhj', // Remplace avec ton service ID EmailJS
+      'template_7iczykr', // Remplace avec ton template ID EmailJS
+      values, // Les valeurs du formulaire
+      'lXQoYgh1Nw5i8k2yz' // Remplace avec ton User ID EmailJS
+    )
+    .then((response) => {
+      console.log('Success:', response);
+      toast({
+        title: "Message envoyé!",
+        description: "Nous vous répondrons dès que possible.",
+      });
+      form.reset();
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      toast({
+        title: "Erreur",
+        description: "Une erreur est survenue, veuillez réessayer.",
+        variant: 'destructive',
+      });
     });
-    form.reset();
   }
 
   return (
