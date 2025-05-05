@@ -277,45 +277,45 @@ const AboutPage = () => {
             <div className="bg-white rounded-xl p-8 shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-2">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-pink-200 rounded-full flex items-center justify-center text-xl font-semibold text-pink-600 mr-4 transform transition-all duration-300 hover:rotate-12 hover:scale-110">
-                  L
+                  H
                 </div>
                 <div>
-                  <h3 className="font-bold text-xl hover:text-pink-600 transition-colors duration-300">Laura Moreau</h3>
-                  <p className="text-gray-600">Directrice Marketing, Hôtels Bellevue</p>
+                  <h3 className="font-bold text-xl hover:text-pink-600 transition-colors duration-300">Hugues AMOUSSOU</h3>
+                  <p className="text-gray-600">Gérant de KAWERU GROUP</p>
                 </div>
               </div>
               <blockquote className="text-gray-600 italic leading-relaxed hover:text-gray-800 transition-colors duration-300 text-justify hyphens-auto">
-                "Les Ateliers Pastels ont transformé notre identité de marque avec un système de design sophistiqué et cohérent. Leur attention aux détails et leur compréhension de nos objectifs étaient impressionnantes."
+                "Travailler avec LES ATELIERS PASTELS a été une expérience marquante. Leur sens du détail, leur capacité d'écoute et leur créativité ont grandement contribué à valoriser l'image de notre groupe. Une équipe professionnelle et passionnée que je recommande sans hésiter."
               </blockquote>
             </div>
 
             <div className="bg-white rounded-xl p-8 shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-2">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-blue-200 rounded-full flex items-center justify-center text-xl font-semibold text-blue-600 mr-4 transform transition-all duration-300 hover:rotate-12 hover:scale-110">
-                  M
+                  O
                 </div>
                 <div>
-                  <h3 className="font-bold text-xl hover:text-blue-600 transition-colors duration-300">Marc Dupont</h3>
-                  <p className="text-gray-600">Fondateur, Jardin Bio</p>
+                  <h3 className="font-bold text-xl hover:text-blue-600 transition-colors duration-300">Odilon CHODATON</h3>
+                  <p className="text-gray-600">Gérant d'AFRICA BARBECUE</p>
                 </div>
               </div>
               <blockquote className="text-gray-600 italic leading-relaxed hover:text-gray-800 transition-colors duration-300 text-justify hyphens-auto">
-                "Travailler avec cette équipe a été un plaisir du début à la fin. Ils ont pris notre projet d'emballage écologique et ont dépassé nos attentes avec des solutions créatives et durables."
+                "Nous avions besoin d'un accompagnement authentique pour refléter l'esprit convivial de notre marque, et LES ATELIERS PASTELS ont su capter l'essence même de notre univers. Leur approche humaine et sur mesure fait toute la différence."
               </blockquote>
             </div>
 
             <div className="bg-white rounded-xl p-8 shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-2">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-yellow-200 rounded-full flex items-center justify-center text-xl font-semibold text-yellow-600 mr-4 transform transition-all duration-300 hover:rotate-12 hover:scale-110">
-                  S
+                  T
                 </div>
                 <div>
-                  <h3 className="font-bold text-xl hover:text-yellow-600 transition-colors duration-300">Sarah Legrand</h3>
-                  <p className="text-gray-600">Responsable Événements, Musée de la Ville</p>
+                  <h3 className="font-bold text-xl hover:text-yellow-600 transition-colors duration-300">Terence QUENUM</h3>
+                  <p className="text-gray-600">Promoteur de HOQ</p>
                 </div>
               </div>
               <blockquote className="text-gray-600 italic leading-relaxed hover:text-gray-800 transition-colors duration-300 text-justify hyphens-auto">
-                "La signalétique et les supports promotionnels créés pour notre exposition étaient magnifiques. L'équipe a été réactive, professionnelle, et a tout livré dans des délais serrés."
+                "À chaque étape de notre projet, LES ATELIERS PASTELS ont fait preuve d'un professionnalisme irréprochable. Leur vision artistique, alliée à une rigueur stratégique, a donné vie à une identité forte et cohérente pour HOQ."
               </blockquote>
             </div>
           </div>
